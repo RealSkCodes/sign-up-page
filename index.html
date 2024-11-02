@@ -8,8 +8,101 @@
   </head>
   <body>
     <div id="main-container">
-      <div id="left-div"></div>
-      <div id="right-div"></div>
+      <div id="left-container">
+        <div id="hero-logo-container">
+          <img src="assets/images/odin-lined.png" alt="Odin Logo" />
+          <span>ODIN</span>
+        </div>
+        <div id="credit-container">
+          <span id="credit">
+            Photo by
+            <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+            <a href="https://unsplash.com/">Unsplash</a>
+          </span>
+        </div>
+      </div>
+      <div id="right-container">
+        <div id="para-container">
+          <p>
+            This is not a real online service! You know you need something like this in your life to
+            help you realize your deepest dreams. <br />
+            Sign up now to get started.
+            <br /><br /><em>You know you want to.</em>
+          </p>
+        </div>
+        <div id="form-container">
+          <p>Let's do this!</p>
+          <form id="signupForm" method="post" onsubmit="return validateForm()">
+            <div class="form-row">
+              <div>
+                <label for="fname">FIRST NAME</label><br />
+                <input type="text" name="fname" id="fname" required /><br />
+              </div>
+              <div>
+                <label for="lname">LAST NAME</label><br />
+                <input type="text" name="lname" id="lname" required /><br />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="email">EMAIL</label><br />
+                <input type="email" name="email" id="email" required /><br />
+              </div>
+              <div>
+                <label for="phone-number">PHONE NUMBER</label><br />
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  pattern="^\d{10}$"
+                  required
+                /><br />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="password">PASSWORD</label><br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}"
+                  title="Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, and a number."
+                  required
+                /><br />
+              </div>
+              <div>
+                <label for="confirm-password">CONFIRM PASSWORD</label><br />
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  required
+                /><br />
+              </div>
+            </div>
+            <div id="button-container">
+              <button type="submit">Create Account</button>
+            </div>
+          </form>
+          <p id="log-in-para">
+            Already have an account? <a href="https://www.google.com" target="_blank">Log in</a>
+          </p>
+        </div>
+      </div>
     </div>
+
+    <script>
+      function validateForm() {
+        const password = document.getElementById("password").value
+        const confirmPassword = document.getElementById("confirm-password").value
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.")
+          return false
+        }
+        return true
+      }
+    </script>
   </body>
 </html>
