@@ -3,6 +3,7 @@
   font-family: "NorseBold";
   src: url("./assets/fonts/Norse-Bold.otf") format("opentype");
 }
+
 body,
 html {
   margin: 0;
@@ -10,6 +11,7 @@ html {
   font-family: "Open Sans", sans-serif;
   background: black;
 }
+
 #hero-logo-container {
   display: flex;
   justify-content: center;
@@ -18,10 +20,12 @@ html {
   margin-top: 10rem;
   background: #0000006b;
 }
+
 #hero-logo-container img {
-  height: 150px; /* Adjust as needed */
-  margin-right: 1rem; /* Space between the image and the text */
+  height: 150px;
+  margin-right: 1rem;
 }
+
 #hero-logo-container span {
   font-family: "NorseBold", sans-serif;
   font-size: 7rem;
@@ -29,6 +33,7 @@ html {
   color: white;
   letter-spacing: 2px;
 }
+
 #left-container {
   position: relative;
   width: 40vw;
@@ -37,6 +42,7 @@ html {
   background-size: contain;
   height: 100vh;
 }
+
 #credit-container {
   position: absolute;
   bottom: 0;
@@ -47,11 +53,13 @@ html {
   align-items: center;
   padding: 1rem;
 }
+
 #credit-container #credit {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   color: white;
 }
+
 #credit-container #credit a {
   color: white;
 }
@@ -65,42 +73,66 @@ html {
   width: 60vw;
   background-color: aliceblue;
 }
+
 #para-container p {
   font-size: 1.4rem;
   font-weight: 750;
   padding: 8rem 10rem 3rem 3rem;
 }
+
 #form-container {
   background-color: whitesmoke;
   padding: 0.5rem 10rem 1rem 2rem;
   box-shadow: 0 0px 10px #00000017, 0 10px 10px #00000017;
 }
+
 #form-container p {
   margin: 0.5rem 0rem;
   font-size: 1.4rem;
   font-weight: 750;
 }
+
 .form-row {
   display: flex;
 }
+
 .form-row div {
   margin: 1rem 4rem 1rem 0rem;
 }
+
 .form-row label {
   letter-spacing: 1.5px;
   font-size: 0.8rem;
   font-weight: 600;
 }
+
 .form-row input {
   font-size: 1.4rem;
   border: 0.5px solid #e5e7eb;
   border-radius: 5px;
 }
+
 .form-row input:focus {
-  outline: none; /* Removes the default outline */
-  outline: 1px solid blue;
-  box-shadow: 2px 5px 10px #0202024f; /* Optional: adds a subtle shadow effect */
+  outline: none;
+  box-shadow: 2px 5px 10px #0202024f;
 }
+
+.form-row input:valid:focus {
+  border-color: blue;
+}
+
+.form-row input:focus:invalid {
+  border-color: red;
+}
+
+.form-row input:invalid {
+  border-color: #e5e7eb;
+}
+
+.form-row input:valid {
+  border-color: #e5e7eb;
+}
+
 #button-container button {
   cursor: pointer;
   font-size: 1.2rem;
@@ -114,18 +146,22 @@ html {
   color: whitesmoke;
   box-shadow: 0 5px 10px #00000060;
 }
+
 #button-container button:hover {
   background-color: #475739;
 }
+
 #button-container button:active {
   background-color: #596d48;
   transform: scale(1.03);
 }
+
 #button-container p {
   font-size: 1.2rem;
   font-weight: 550;
   margin: 0rem 0rem 0rem 2rem;
 }
+
 #button-container p a {
   color: #596d48;
   font-weight: bold;
